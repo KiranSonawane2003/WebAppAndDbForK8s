@@ -1,4 +1,11 @@
 # ASP.NET Core
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Docker-Kubernetes-Demo'
+    azureContainerRegistry: '{"loginServer":"dockerkubernetesregistary.azurecr.io", "id" : "/subscriptions/a7f9e35f-8781-452a-8bb8-4883ccc02ae4/resourceGroups/Docker-Kubernetes-Demo/providers/Microsoft.ContainerRegistry/registries/DockerKubernetesRegistary"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    action: 'Run a Docker Compose command'
 # Build and test ASP.NET Core projects targeting .NET Core.
 # Add steps that run tests, create a NuGet package, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/dotnet-core
